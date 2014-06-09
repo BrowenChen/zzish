@@ -23,6 +23,23 @@ Algorithm:
 8. if quality respobse is lower than 3 start repetition for the item from the beginning with no E-factor change
 9. Repeat all items under four in quality assement.
 
-
 """
+
+class repitition:
+
+	nameKey = None
+	data = []
+
+	def __init__(self, name):
+		self.nameKey = name
+
+
+class user:
+
+	name = None
+	def __init__(self, name):
+		self.name = name
+
+	
+
 
