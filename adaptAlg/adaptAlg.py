@@ -16,7 +16,7 @@ Algorithm:
         Where OF(n, EF) - optimal factor for n-th repitition  and EF 
 4. OF Matrix to determine inter-repetition intervals. 
         I(n, EF) = OF( n, EF) * I(n-1, EF)
-        ... Code Onbline
+        ... Code Online
 5. Assess quality of repetition responses in 0-5 scale
 6. Modify E-factor According to formula
 7. After each rep, modify relevant entry of OF matrix. 
@@ -25,21 +25,88 @@ Algorithm:
 
 """
 
-class repitition:
+import json
 
-	nameKey = None
-	data = []
+class Game():
+	user = None
 
 	def __init__(self, name):
-		self.nameKey = name
+		self.user = User(name)
+
+	def begin(self):
+		print("Spaced Repitition Algorithm \n" + 
+			"Scale of 1 - 5, rate your comfort level\n" +
+			"(0) - No clue\n" + 
+			"(1) - Slight recognition\n" +
+			"(2) - Almost had it! \n" +
+			"(3) - Slight recognition\n" +
+			"(4) - Got it, but not perfect \n" +
+			"(5) - Mastery \n")
+
+		curUser = self.getUser()
+		repAlgorithm(curUser)
 
 
-class user:
+	#Get User Object____
+	def getUser(self):
+		print("Name of user is ")
+		print(self.user.getName())
+		return self.user
+		
+	#Repition Algorithm for User____
+	def repAlgorithm(self, user):
+		print("Starting algorithm")
+
+
+
+
+
+		return 0
+
+	def updateEF():
+		return 0
+
+
+		
+
+
+
+class User:
 
 	name = None
+	cardFile = None
+	#The start date of the current instantiation of game
+	day = 0
+	EFFactorData = {}
+
+	
+
+
+
 	def __init__(self, name):
 		self.name = name
 
-	
+	def getName(self):
+		return self.name
+
+	#Import a file. 
+	def uploadCardFile(self):
+
+
+	def getCardCount(self):
+		return 0
+
+	def addCard(self):
+		return 0
+
+
+
+
+
+
+
+game = Game("Owen")
+print("Starting new game object name game with User Owen")
+
 
 
