@@ -25,7 +25,43 @@ User
 5	|_|_|_|_|   
 6	|_|_|_|_|   
 
-int cellCurCursor = (x,y) of where the current cursor is on the cell. 
+
+Marked Grid - Checks if current cell is marked or not
+
+	 1 2 3 4    
+	 _ _ _ _
+1	|_|_|_|_|	
+2	|_|_|_|_|   
+3	|_|_|_|_|   
+4	|_|_|_|_|   
+5	|_|_|_|_|   
+6	|_|_|_|_|   
+
+
+cellCurCursor = (x,y) of where the current cursor is on the cell. 
+	Cursor has options to move(LRUP) or click()
+
+	click() action 
+		Check if current cell has been previously selected
+		If MarkedGrid (cellCurCursor(x,y) ) == false:
+		(Continue with algorithm)
+			prompt user for input 
+			Listen for user input
+			Check if input is equal to the answer grid
+			Mark right or wrong in that current grid
+			Mark in MarkedGrid that cellCurCursor(x, y) is marked
+			Maybe draw in a picture on that cell grid for the User grid to show that it is marked
+
+		If the markedGrid of (cellCurCursor(x,y)) is == true, we cannot use that cell 
+
+	move(direction) action
+		4 case switches
+		Left - do those actions
+		Right -
+		Up -
+		Down - 
+
+
 	
 """
 
