@@ -1,0 +1,46 @@
+extends layout
+
+block content
+	div.row
+		p <br>
+
+		center
+			h1 SCORE: <span id="score"> 0 </span>
+
+		div.row
+			div
+				p some content
+
+		div.row
+			center
+				h2 MOST AWESOME MULTIPLICATION GAME EVAR!
+				h2#target_input type 'start' to start
+
+		p <br>
+
+		div.row
+			- for (var i = 0; i < 6	; ++i) {
+				div.row
+					- for (var j = 0; j < 6; ++j) {
+					div.columns(id="block#{i}#{j}", style="height: 50px; width: 50px;", onclick="selectBlock('block#{i}#{j}');").block
+						center
+							p(id="question#{i}#{j}") #{i},#{j} 
+					- }
+					p <br>
+			- }
+
+		p <br>
+
+		div.row
+			div.small-4.large-centered.columns
+				p Solution
+					input(type="text").enter#attack_input
+
+		p <br>
+		p <br>
+		p <br>
+		
+		h3 Times
+		hr
+		p#times
+
